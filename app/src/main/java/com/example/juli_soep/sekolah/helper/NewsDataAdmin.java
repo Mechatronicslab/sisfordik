@@ -6,13 +6,14 @@ package com.example.juli_soep.sekolah.helper;
 
 public class NewsDataAdmin {
 
-    private String id, nama;
+    private String id, nama, jabatan;
 
     public NewsDataAdmin(){}
 
-    public NewsDataAdmin(String id, String nama){
+    public NewsDataAdmin(String id, String nama, String jabatan){
         this.id = id;
         this.nama = nama;
+        this.jabatan = jabatan;
     }
 
     public String getId() {
@@ -29,6 +30,14 @@ public class NewsDataAdmin {
 
     public void setNama(String nama) {
         this.nama = nama;
+    }
+
+    public String getJabatan() {
+        return jabatan;
+    }
+
+    public void setJabatan(String jabatan) {
+        this.jabatan = jabatan;
     }
 
 }

@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Input Gaji"
+            android:text="Input Gaji Satpam"
             android:textColor="@color/white"
             android:textSize="20dp"
             android:textStyle="bold"/>

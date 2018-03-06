@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/daftar"
+            android:text="Input Gaji Staff"
             android:textColor="@color/white"
             android:textSize="20dp"
             android:textStyle="bold"/>
@@ -678,7 +678,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Data Guru"
+                    android:text="Total"
                     android:textColor="@color/white"
                     android:textSize="20dp"
                     android:textStyle="bold"/>

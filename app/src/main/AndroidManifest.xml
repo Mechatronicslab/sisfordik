@@ -53,7 +53,8 @@
         <activity android:name=".BAK.InputGajiPegawai" />
         <activity android:name=".BAK.InputGajiSatpam" />
         <activity android:name=".BAK.ShowGajiSatpam" />
-        <activity android:name=".BAK.ShowGajiStaff"></activity>
+        <activity android:name=".BAK.ShowGajiStaff" />
+        <activity android:name=".BAK.DetailGajiSatpam"></activity>
     </application>
 
 </manifest>

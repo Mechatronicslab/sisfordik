@@ -56,11 +56,13 @@ public class NewsAdapterAdmin extends BaseAdapter{
         TextView nmr = (TextView)convertView.findViewById(R.id.nomornya);
         TextView id = (TextView) convertView.findViewById(R.id.idnya);
         TextView nama = (TextView) convertView.findViewById(R.id.etNama);
+        TextView jabatan = (TextView) convertView.findViewById(R.id.etJabatan) ;
 
         NewsDataAdmin news = newsItems.get(position);
         nmr.setText(String.valueOf(position+1));
         id.setText(news.getId());
         nama.setText("Nama     :   "+news.getNama());
+        jabatan.setText(news.getJabatan());
 
         return convertView;
     }
