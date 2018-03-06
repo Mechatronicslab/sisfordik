@@ -36,8 +36,6 @@ public class NewsDataAdmin {
         return jabatan;
     }
 
-    public void setJabatan(String jabatan) {
-        this.jabatan = jabatan;
-    }
+    public void setJabatan(String jabatan) {this.jabatan = jabatan;}
 
 }

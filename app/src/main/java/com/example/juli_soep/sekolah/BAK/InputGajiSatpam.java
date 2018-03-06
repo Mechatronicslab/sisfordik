@@ -75,6 +75,7 @@ public class InputGajiSatpam extends AppCompatActivity {
     @OnClick(R.id.zubmit)
     void submit() {
         String nama = getNamanya.getText().toString();
+        String jabatan = "Satpam";
         String gaji_pokok = getGajiPokok.getText().toString();
         String tunj_jabatan = getTunjanganJabatan.getText().toString();
         String pulsa = getPulsa.getText().toString();
@@ -86,7 +87,7 @@ public class InputGajiSatpam extends AppCompatActivity {
         String dana_sosial = getDanaSosial.getText().toString();
         String ttl_potongan = getTtlPotongan.getText().toString();
         String gaji_terima = getGajiTerima.getText().toString();
-        gaji_satpam(nama,gaji_pokok,tunj_jabatan,pulsa,thr,ttl_gaji,p_suyono,koprasi,jalur,dana_sosial,ttl_potongan,gaji_terima);
+        gaji_satpam(nama,jabatan,gaji_pokok,tunj_jabatan,pulsa,thr,ttl_gaji,p_suyono,koprasi,jalur,dana_sosial,ttl_potongan,gaji_terima);
 
     }
 
@@ -97,7 +98,7 @@ public class InputGajiSatpam extends AppCompatActivity {
         finish();
     }
 
-    private void gaji_satpam(final String nama, final String gaji_pokok,final String tunj_jabatan
+    private void gaji_satpam(final String nama,final String jabatan, final String gaji_pokok,final String tunj_jabatan
             ,final String pulsa,final String thr,final String ttl_gaji,final String suyono,final String koprasi
             ,final String jalur,final String dana_sosial,final String ttl_potongan,final String gaji_terima){
 
@@ -152,6 +153,7 @@ public class InputGajiSatpam extends AppCompatActivity {
                 Map<String, String> params = new HashMap<String, String>();
                 params.put(Config_URL.TAG, "gaji_satpam");
                 params.put("nama", nama);
+                params.put("jabatan", jabatan);
                 params.put("gaji_pokok",gaji_pokok );
                 params.put("tunj_jabatan", tunj_jabatan);
                 params.put("pulsa", pulsa);

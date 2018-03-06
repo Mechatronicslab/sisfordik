@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -33,6 +35,7 @@ import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import volley.AppController;
 import volley.Config_URL;
 
@@ -59,6 +62,17 @@ public class ShowGajiSatpam extends AppCompatActivity {
         setContentView(R.layout.activity_show_gaji_satpam);
         ButterKnife.bind(this);
         newsList.clear();
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
+                // TODO Auto-generated method stub
+                Intent intent = new Intent(ShowGajiSatpam.this, DetailGajiSatpam.class);
+                intent.putExtra("id", newsList.get(position).getId());
+                startActivity(intent);
+            }
+        });
         adapter = new NewsAdapterAdmin(ShowGajiSatpam.this, newsList);
         list.setAdapter(adapter);
 
@@ -66,6 +80,7 @@ public class ShowGajiSatpam extends AppCompatActivity {
         pDialog.setCancelable(false);
         callNews();
     }
+
 
     private void callNews(){
 
@@ -95,6 +110,7 @@ public class ShowGajiSatpam extends AppCompatActivity {
                             NewsDataAdmin object = new NewsDataAdmin();
                             object.setId(jsonObject.getString("id"));
                             object.setNama(jsonObject.getString("nama"));
+                            object.setJabatan(jsonObject.getString("jabatan"));
 
                             newsList.add(object);
                         }
@@ -127,7 +143,6 @@ public class ShowGajiSatpam extends AppCompatActivity {
                 return params;
             }
         };
-
         AppController.getInstance().addToRequestQueue(strReq, tag_json_obj);
     }
 
